@@ -1,0 +1,51 @@
+@import "src/styles/helpers";
+
+.bonuses-badge-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100px;
+  .badge{
+    justify-content: flex-start;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+.bonuses-badge__transfer-text{
+  text-align: center;
+    color: $n8;
+    @include SFPro;
+    @include caption2-s;
+}
+
+.bonuses-badge__transfer-button {
+  position: absolute;
+  right: 16px;
+  z-index: 1;
+  color: $n8;
+  height: 100%;
+  top: 16px;
+  box-sizing: border-box;
+
+  &-icon{
+    border-radius: 12px;
+    height: 52px;
+    width: 52px;
+    background-color: $n;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+
+
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}

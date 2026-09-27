@@ -1,0 +1,33 @@
+@import "src/styles/helpers";
+
+.orders-page {
+  min-height: 100vh;
+  background-color: #F7F8FC;
+
+  &__header {
+    background-color: $n;
+    padding: 16px;
+    .title{
+      @include title;
+      @include SFPro;
+      font-weight: 600;
+      color: $n8;
+      text-transform: initial;
+    }
+    border-radius: 16px;
+    margin-bottom: 4px;
+  }
+
+  &__tabs {
+    background-color: $n;
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+  }
+
+  &__content {
+    flex: 1;
+  }
+}
+
+

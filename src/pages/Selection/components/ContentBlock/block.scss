@@ -1,0 +1,32 @@
+.selection_block{
+  margin-bottom: 32px;
+  .banner-image{
+    border-radius: 20px;
+  }
+  .image-slider{
+    width: auto;
+    height: 234px;
+    border-radius: 20px;
+    .like-container{
+      top: 190px;
+      right: 16px;
+    }
+  }
+  .establishment-page__mainInfo{
+    display: flex;
+    flex-direction: column;
+    >div:first-of-type{
+      order: 2;
+    }
+  }
+  .description{
+    margin:16px 0px;
+  }
+  .button-container{
+    a {
+      display: inherit;
+    }
+    display: grid;
+
+  }
+}

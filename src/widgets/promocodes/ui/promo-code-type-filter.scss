@@ -1,0 +1,21 @@
+@import "src/styles/helpers";
+
+.promo-code-type-filter {
+  padding: 20px 16px;
+
+  &__content {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+

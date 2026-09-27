@@ -1,0 +1,90 @@
+@import "src/styles/helpers";
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 14px;
+  gap: 8px;
+  border-radius: 12px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+
+  box-sizing: content-box;
+  letter-spacing: -0.23px;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  &.primary {
+    background: #045BFF;
+    color: #ffffff;
+    border: none;
+    @include body1-s;
+    line-height: 20px;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &:active {
+      opacity: 0.65;
+    }
+
+    &.disabled {
+      opacity: 0.35;
+    }
+  }
+  &.outline{
+    background: transparent;
+    border: 1px solid #3C3C431F;
+    color: #000;
+  }
+  &.gradient{
+    background: linear-gradient(90deg, #DDB4F6 0%, #8DD0FC 100%);
+    border: none;
+    @include body1-s;
+    line-height: 20px;
+    color: black;
+    line-height: 18px;
+    letter-spacing: -0.08px;
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &:active {
+      opacity: 0.65;
+    }
+
+    &.disabled {
+      opacity: 0.35;
+    }
+  }
+
+  &.secondary {
+    background: #F5F5F5;
+    color: rgba(0, 0, 0, 0.8);
+    border: none;
+    //border: 1px dashed #9747FF;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &:active {
+      opacity: 0.65;
+    }
+
+    &.disabled {
+      opacity: 0.35;
+    }
+  }
+
+  .label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,25 @@
+@import "src/styles/helpers";
+
+.account-section-placeholder {
+  @include SFPro;
+  padding: 32px 16px;
+  text-align: center;
+  color: $n8;
+
+  h1 {
+    margin: 0 0 12px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 320px;
+    font-size: 15px;
+    line-height: 22px;
+    color: rgba(60, 60, 67, 0.65);
+  }
+}
+
+

@@ -1,0 +1,45 @@
+@import '../../../../../styles/helpers';
+
+.opening-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    @include SFPro;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__time {
+    color: #CFCFCF;
+    @include SFPro;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    opacity: 0.6;
+  }
+
+  &--open {
+    color: $n;
+  }
+
+  &--closed {
+    color: $p3;
+  }
+}

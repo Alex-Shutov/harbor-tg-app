@@ -1,0 +1,90 @@
+@import "src/styles/helpers";
+
+.shop-item-modal {
+  &__image-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+
+  &__indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+
+    &--active {
+      background-color: $n8;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__section-title {
+    @include body1-xs;
+    color: #3C3C4399;
+    margin-bottom: 4px;
+
+  }
+
+  &__description {
+    p {
+      @include body1-xs;
+      color: #3C3C4399;
+      margin: 0;
+    }
+  }
+
+  &__establishment,
+  &__available,
+  &__cost,
+  &__pickup,
+  &__address
+  {
+    display: flex;
+    gap: 8px;
+    p {
+      @include body1-xs;
+      color: $n8;
+      margin: 0;
+    }
+    .link{
+      color: $p1;
+      cursor: pointer;
+    }
+  }
+
+  &__cost-value {
+    color: $n8;
+  }
+
+  &__actions {
+    .button{
+      width: -webkit-fill-available ;
+    }
+    margin-top: 8px;
+  }
+
+  &__cart-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__buy-button {
+    flex: 1;
+  }
+
+  &__counter {
+    flex-shrink: 0;
+  }
+}
+

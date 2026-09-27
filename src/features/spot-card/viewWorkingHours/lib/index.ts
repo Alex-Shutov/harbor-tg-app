@@ -1,0 +1,1 @@
+export {useWorkingHours} from './hooks/useWorkingHours.ts'

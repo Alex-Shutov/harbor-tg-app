@@ -1,0 +1,138 @@
+@import 'src/styles/helpers';
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: $n;
+  border: 1px solid #7676801F;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  &__header {
+    @include body1-m;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+
+  &--expired {
+    opacity: 0.6;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: 54px;
+    height: 54px;
+    overflow: hidden;
+    border-radius: 180px;
+    flex-shrink: 0;
+
+    @include m {
+      width: 54px;
+      height: 54px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: rgba($n8, 0.7);
+    color: $n;
+    padding: 2px 6px;
+    border-radius: 4px;
+    @include caption2;
+    font-weight: 700;
+    backdrop-filter: blur(4px);
+  }
+
+  &__info{
+    //display: flex;
+    //flex-direction: row;
+    //
+  }
+
+  &__content {
+    width: 100%;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+
+  &__subtitle {
+    @include caption2-s;
+    color: $shades1;
+    margin: 0;
+  }
+
+  &__winner-message {
+    @include body1-r;
+    color: $p1;
+    margin: 4px 0 0;
+    line-height: 1.4;
+  }
+
+  &__title {
+    @include body1-r;
+    margin: 0;
+    color: $n7;
+    line-height: 1.2;
+  }
+
+  &__description {
+
+    .description{
+      align-items: center;
+    }
+    @include body1-xs;
+    text-align: center;
+    color: $n8;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  &__status{
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: $p1;
+    flex-shrink: 0;
+  }
+}

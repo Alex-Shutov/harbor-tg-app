@@ -1,0 +1,78 @@
+@import "src/styles/helpers";
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  margin-bottom: 16px;
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &__image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__like-button {
+    .like-button{
+      background-color: transparent;
+    }
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  &__subtitle {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: #999;
+    margin: 0;
+  }
+
+  &__title {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    color: #111;
+    margin: 0;
+    vertical-align: middle;
+  }
+
+  &__date {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: #999;
+    margin: 0;
+  }
+}

@@ -1,0 +1,30 @@
+@import "src/styles/helpers";
+.main__page{
+  background-color: $n;
+  position: relative;
+  top: -16px;
+  border-radius: 12px;
+  padding: 0;
+  margin: 0;
+  //padding-bottom: 96px;
+  margin-bottom: 96px;
+  .main__page__title{
+    @include indexPadding;
+    @include title1-s;
+    padding-bottom: 14px;
+    color:$n8 ;
+    font-weight: 600;
+    text-transform: none;
+  }
+  &__search-section{
+    padding-right: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    .search-bar--container{
+      flex-grow: 1;
+    }
+  }
+}
+

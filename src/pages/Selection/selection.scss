@@ -1,0 +1,20 @@
+@import "src/styles/helpers";
+.selection_container{
+  overflow-y: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  >.title{
+    @include title1-m;
+    color: $n8;
+    margin-bottom: 8px;
+    text-transform: none;
+    @include SFPro
+  }
+  .contentObjects{
+    margin-top: 32px;
+  }
+  .description{
+    color: $n8;
+  }
+}

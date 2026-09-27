@@ -1,0 +1,55 @@
+.fullSize-layout{
+  width: 100%;
+  height: 94px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #EEF2F4 0%, #E4EBEE 100%);
+  color: #12202A;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  padding-top: calc(4px + env(safe-area-inset-top));
+
+  @media only screen
+  and (device-width: 430px)
+  and (device-height: 932px)
+  and (-webkit-device-pixel-ratio: 3) {
+      padding-top: 28px;
+  }
+
+  @media (device-width: 393px) {
+    padding-top: 6px
+  }
+
+  @media (device-width: 390px) and (device-height: 844px) {
+      padding-top: 20px
+  }
+
+  @media (device-width: 402px) and (device-height: 874px) {
+    padding-top: 24px
+  }
+
+  @media (device-width: 440px) and (device-height: 956px) {
+    padding-top: 28px
+  }
+
+  @media (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+    padding-top: 26px
+  }
+
+  @media (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) {
+    padding-top: 28px
+  }
+
+  p{
+    width: 100%;
+    margin-block-end: 0.85rem;
+    text-align: center;
+    font-family: 'Literata', Georgia, serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    color: #0F6E6A;
+  }
+}

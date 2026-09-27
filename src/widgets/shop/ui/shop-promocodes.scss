@@ -1,0 +1,61 @@
+.shop-promocodes {
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .bottom-sheet-image__content{
+    margin-bottom: unset;
+  }
+
+  &__card {
+    flex: 0 0 calc(50% - 6px);
+    min-width: 0;
+    max-width: calc(50% - 6px);
+  }
+
+  &__loading,
+  &__empty,
+  &__error {
+    padding: 32px;
+    text-align: center;
+    color: var(--text-secondary);
+  }
+
+  &__error {
+    color: var(--error-color);
+  }
+
+  &__error-message {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: var(--error-light);
+    color: var(--error-color);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  &__success-message {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: var(--success-light);
+    color: var(--success-color);
+    border-radius: 8px;
+    text-align: center;
+  }
+}
+
+.promo-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+.promo-purchase-toast {
+  position: fixed;
+  bottom: 0px;
+  left: 8px;
+}

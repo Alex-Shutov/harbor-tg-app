@@ -1,0 +1,264 @@
+@import '@styles/helpers';
+
+
+.gallery__lightbox {
+position: fixed;
+inset: 0;
+z-index: 999999999;
+display: flex;
+align-items: center;
+justify-content: center;
+animation: fadeIn 0.3s ease;
+}
+
+.gallery__lightbox__close-button{
+  z-index: 10000;
+  // Базовое позиционирование для десктопа
+  top: 16px;
+  right: 16px;
+  position: fixed;
+  background: rgba(127, 127, 127, 0.9) !important;
+  backdrop-filter: blur(10px);
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  
+  // На мобильных учитываем высоту шапки FullSizeLayout
+  @include m {
+    // Учитываем высоту шапки FullSizeLayout (94px) + padding-top (4px + safe-area) + отступ 16px
+    top: calc(98px + env(safe-area-inset-top) + 16px);
+    right: max(16px, env(safe-area-inset-right));
+  }
+  
+  @include xs {
+    // На маленьких мобильных учитываем возможные дополнительные отступы из-за медиа-запросов
+    // Берем максимальную высоту шапки примерно 122px (94px + 28px padding) + safe-area + отступ
+    top: calc(122px + env(safe-area-inset-top) + 12px);
+    right: max(12px, env(safe-area-inset-right));
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+  
+  svg {
+    width: 20px !important;
+    height: 20px !important;
+    
+    @include xs {
+      width: 24px !important;
+      height: 24px !important;
+    }
+  }
+}
+
+.gallery__lightbox-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba($n8, 0.98);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.gallery__lightbox-content {
+  position: relative;
+  z-index: 10;
+
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 32px;
+  height: 100vh;
+}
+
+.gallery__lightbox-image-wrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.gallery__lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  animation: zoomIn 0.3s ease;
+}
+
+.gallery__lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 20;
+  width: 40px;
+  height: 40px;
+  background: rgba($n, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: $n;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba($n, 0.3);
+    transform: scale(1.1);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include xs {
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.gallery__lightbox-nav {
+  display: none;  // ← УБИРАЕМ стрелки!
+}
+
+.gallery__lightbox-thumbnails {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 16px;
+  justify-content: flex-start;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba($n, 0.05);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba($n, 0.3);
+    border-radius: 3px;
+
+    &:hover {
+      background: rgba($n, 0.4);
+    }
+  }
+
+  @include xs {
+    padding: 12px;
+    gap: 6px;
+  }
+}
+
+.gallery__lightbox-thumbnail {
+  flex-shrink: 0;
+  width: 60px;
+  height: 90px;
+  background: none;
+  border: unset;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  scroll-snap-align: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    border-color: rgba($n, 0.4);
+    transform: scale(1.05);
+  }
+
+  &--active {
+    border: 1px solid #045BFF;
+    box-shadow: 0 0 0 2px rgba($p1, 0.2);
+  }
+
+  @include xs {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.gallery__lightbox-counter {
+  display: none;
+}
+
+.gallery__lightbox-close-button {
+  position: fixed;
+  background: red;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 80px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10001;
+  opacity: 0;
+  -webkit-touch-callout: none;
+
+  &:active {
+    opacity: 0;
+  }
+
+  @include xs {
+    width: 100px;
+    height: 70px;
+  }
+}
+
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,15 @@
+import { IIconProps } from '@shared/ui/icons/icons.types.ts';
+
+export const AttachIcon = ({ size = 24, ...props }: IIconProps) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    {...props}
+  >
+    <path d="M14.385 14.175L11.5033 17.0566C9.90496 18.655 9.90496 21.2333 11.5033 22.8316C13.1016 24.43 15.68 24.43 17.2783 22.8316L21.8166 18.2933C25.0016 15.1083 25.0016 9.9283 21.8166 6.7433C18.6316 3.5583 13.4516 3.5583 10.2666 6.7433L5.31996 11.69C2.58996 14.42 2.58996 18.8533 5.31996 21.595" stroke="#85858B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  </svg>
+);
+

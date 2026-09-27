@@ -1,0 +1,175 @@
+@import "src/styles/helpers";
+
+.filters-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  @include indexPadding;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  &__icon-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #7676801F;
+    border: none;
+    border-radius: 10px;
+    color: $n8;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    flex-shrink: 0;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      background-color: #76768033;
+    }
+
+    &:active {
+      background-color: #76768040;
+    }
+
+    &--active {
+      background-color: $n8;
+      color: $n;
+
+      &:hover {
+        background-color: $n7;
+      }
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: $p1;
+    border-radius: 50%;
+    border: 2px solid $n;
+  }
+
+  &__dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 7px 14px;
+    background-color: #7676801F;
+    border: none;
+    border-radius: 10px;
+    color: $n8;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    user-select: none;
+    @include body1-m;
+
+    &--active {
+      background-color: $n8;
+      color: $n;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__dropdown-text {
+    flex: 1;
+  }
+
+  &__dropdown-icon {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  &__dropdown--open &__dropdown-icon {
+    transform: rotate(180deg);
+  }
+
+  &__dropdown-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    min-width: 100%;
+    background-color: $n;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 1000;
+    animation: dropdown-fade-in 0.2s ease;
+  }
+
+  &__dropdown-option {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    background: none;
+    border: none;
+    text-align: left;
+    color: $n8;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    @include body1-m;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: #7676801F;
+    }
+
+    &--selected {
+      background-color: $n8;
+      color: $n;
+      @include body1-m;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(118, 118, 128, 0.12);
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 14px;
+    background-color: #7676801F;
+    border: none;
+    border-radius: 10px;
+    color: $n8;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    user-select: none;
+    @include body1-m;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@keyframes dropdown-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,76 @@
+@import "src/styles/helpers";
+.establishment-page{
+  &__mainInfo{
+    margin-bottom: 16px;
+    color: $n8;
+    .hours-component{
+      margin-bottom: 8px;
+    }
+    .expandable-description{
+      margin-bottom: 8px;
+
+    }
+    &_title{
+      @include title1-m;
+      padding: 4px 0px;
+    }
+    &_address{
+      color: $n6;
+      padding: 4px 0px;
+
+      @include caption2-s
+    }
+    &_categories{
+      display: inline-flex;
+      align-items: center;
+      &_category{
+        //color:$n6 ;
+        @include caption2-s;
+        &_main{
+          color: $n7;
+        }
+        &_inner{
+          color: $n6;
+        }
+      }
+      &_category:not(:last-of-type)::after{
+        content: "•";
+        display: inline-flex;
+        margin: 0 4px;
+        color:$n6 ;
+        //&_last::after{
+        //  content: none;
+        //  display: none;
+        //}
+      }
+
+    }
+
+  }
+}
+.categories-scroll-container {
+  overflow: hidden;
+  width: 100%;
+  cursor: grab;
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: start;
+  .establishment-page__costLevel,.establishment-page__ageLevel{
+    white-space: nowrap;
+    background-color: white;
+    z-index: 20;
+    &::after{
+      @include caption2-s;
+      content: "•";
+      margin: 0 4px;
+      color:$n6 ;
+    }
+  }
+}
+
+.categories-scroll-content {
+
+  white-space: nowrap;
+  user-select: none;
+}

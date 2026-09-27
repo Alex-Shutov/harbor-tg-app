@@ -1,0 +1,58 @@
+@import "src/styles/helpers";
+
+.transfer-confirmation-modal {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__message {
+    @include SFPro;
+    @include body1-xs;
+    color: #3C3C4399;
+    text-align: left;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__detail-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    align-items: center;
+  }
+
+  &__detail-label {
+    @include SFPro;
+    @include body1-xs;
+    color: #3C3C4399;
+  }
+
+  &__detail-value {
+    @include SFPro;
+    @include body1-xs;
+    color: $n8;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  &__description {
+    width: 100%;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 12px;
+    padding-top: 8px;
+
+    .button {
+      flex: 1;
+    }
+  }
+}
+

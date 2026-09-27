@@ -1,0 +1,15 @@
+@import "src/styles/helpers";
+
+.work-time {
+  &__title {
+    @include body1-m;
+    color: $n8;
+    margin-bottom: 12px;
+  }
+
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+}

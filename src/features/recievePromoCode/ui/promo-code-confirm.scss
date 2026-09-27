@@ -1,0 +1,26 @@
+@import 'src/styles/helpers';
+
+.promo-confirmation-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__subtitle{
+      color: $n8;
+      @include body1-r;
+  }
+
+  &__button.outline{
+    background-color: #78788029;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 8px;
+
+
+    button {
+      flex: 1;
+    }
+  }
+}

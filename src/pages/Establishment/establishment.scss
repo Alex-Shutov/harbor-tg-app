@@ -1,0 +1,46 @@
+@import "src/styles/helpers";
+.establishment-page{
+  margin-bottom: 96px;
+  width: 100vw;
+  background-color: #f7f8fc;
+  &__gallery{
+    .title{
+      color:$n8 ;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: 0px;
+      vertical-align: middle;
+
+    }
+  }
+  .establishment-page__section{
+    position: relative;
+    top: -8px;
+    padding: 16px;
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 8px;
+
+    .title{
+      color:$n8 ;
+
+
+    }
+  }
+
+  .buttonContainer{
+    a {
+      display: inherit;
+    }
+    display: grid;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    @include indexPadding;
+    width: -webkit-fill-available;
+    left: 0;
+    padding-bottom: 34px;
+  }
+
+}

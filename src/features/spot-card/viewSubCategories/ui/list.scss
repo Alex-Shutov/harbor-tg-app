@@ -1,0 +1,12 @@
+@import "../../../../styles/helpers";
+
+.subcategories-list {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  min-width: min-content;
+  gap: 0; // margin-right на кнопке уже есть
+}

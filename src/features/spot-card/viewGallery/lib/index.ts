@@ -1,0 +1,1 @@
+export {useLightbox} from './hooks/useLightbox.ts'

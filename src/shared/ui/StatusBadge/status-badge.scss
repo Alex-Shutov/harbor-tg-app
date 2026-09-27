@@ -1,0 +1,37 @@
+@import "src/styles/helpers";
+
+.status-badge {
+  @include SFPro;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.status-badge__value {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.status-badge--success {
+  background-color: #F6FFED;
+  color: #34C759;
+}
+.status-badge--complete {
+  background-color: #F7F8FC;
+  color: $n8;
+}
+
+.status-badge--warning {
+  background-color: #FFFBE6;
+  color: #FAAD14;
+}
+
+.status-badge--error {
+  background-color: #FFF1F0;
+  color: #FF0000;
+}
+
+

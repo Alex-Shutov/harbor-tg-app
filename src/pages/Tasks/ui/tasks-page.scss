@@ -1,0 +1,83 @@
+@import "src/styles/helpers";
+
+.tasks-page {
+  padding: 16px;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    .badge{
+      height: 22px;
+    }
+    .title{
+      @include SFPro;
+      @include title1-s;
+      font-size: 20px !important;
+      text-transform: capitalize;
+      color:$n8 ;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__card-title {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  &__card-subtitle {
+    font-size: 13px;
+    color: #8f8f8f;
+  }
+
+  &__card-footer {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__reward {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+  }
+}
+
+
+
+
+
+
+

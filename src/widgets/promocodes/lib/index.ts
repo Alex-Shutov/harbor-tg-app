@@ -1,0 +1,1 @@
+export {usePromocodesState} from './hooks/usePromocodesState.ts'

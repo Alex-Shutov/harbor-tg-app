@@ -1,0 +1,15 @@
+@import "src/styles/helpers";
+.description-section{
+  padding-bottom: 16px;
+  .description-section__title{
+    padding-bottom: 16px;
+    text-transform: none;
+  }
+  .title{
+    text-transform: none;
+
+    font-family: Oswald;
+    @include title;
+
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../../../styles/helpers";
+
+.subcategory-button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: 1px solid #c6c6c8;
+  border-radius: 33px;
+  cursor: pointer;
+  user-select: none;
+  color: $n8;
+  @include caption1-m;
+  &.active{
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+

@@ -1,0 +1,82 @@
+@import "src/styles/helpers";
+
+.close-button {
+  @include SFPro;
+  background: #7F7F7F80;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+  svg{
+    path{
+      stroke: $n;
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &:hover {
+    background: rgba(127, 127, 127, 0.7);
+  }
+
+  &:active {
+    background: rgba(127, 127, 127, 0.85);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(0, 122, 255, 0.3);
+    outline-offset: 2px;
+  }
+
+  &--small {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--medium {
+    width: 32px;
+    height: 32px;
+  }
+
+  &--large {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

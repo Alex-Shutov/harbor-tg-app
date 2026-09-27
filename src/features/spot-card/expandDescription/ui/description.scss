@@ -1,0 +1,41 @@
+.expandable-description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__text {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+
+    &--truncated {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
+    }
+  }
+
+  &__btn {
+    display: inline;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #045bff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    width: fit-content;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &:active {
+      opacity: 0.65;
+    }
+  }
+}

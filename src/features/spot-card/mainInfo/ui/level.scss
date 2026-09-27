@@ -1,0 +1,10 @@
+@import "src/styles/helpers";
+
+.establishment-page__costLevel_level{
+  display: inline-flex;
+  color:$n6 ;
+  font-size: 12px;
+  &.active{
+    color: $n8;
+  }
+}

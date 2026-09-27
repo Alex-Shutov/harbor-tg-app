@@ -1,0 +1,28 @@
+@import "src/styles/helpers";
+
+.categories-section {
+  padding-top: 16px;
+  text-transform: none;
+  .title{
+    text-transform: none;
+    font-family: Oswald;
+
+    @include body1-r;
+  }
+  &__title {
+
+    color: $n6;
+    margin-bottom: 12px;
+  }
+
+  &__scroll-container {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    position: relative;
+    min-width: min-content;
+  }
+}

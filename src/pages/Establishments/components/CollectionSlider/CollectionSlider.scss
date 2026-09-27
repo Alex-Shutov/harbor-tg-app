@@ -1,0 +1,61 @@
+@import "src/styles/helpers";
+.collection-slider {
+  overflow: hidden;
+  padding: 20px 0 10px 16px;
+  //margin: 0 10px;
+  margin-bottom: 0px;
+
+  .collection-label {
+    @include title1-s;
+    margin-bottom: 12px;
+    color: $n8;
+  }
+
+
+  .collection-slider-container {
+    display: flex;
+    gap: 6px;
+    cursor: grab;
+  }
+
+  .collection-item {
+    flex: 0 0 auto;
+    width: 100px;
+    position: relative;
+
+    .collection-image-wrapper {
+      position: relative;
+      width: 96px;
+      height: 96px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .collection-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .collection-title {
+      position: absolute;
+      //top: 5px;
+      bottom: -12px;
+      left: 0;
+      right: 0;
+      color: $n;
+      background: linear-gradient(
+                      to top,
+                      rgba(0, 0, 0, 0.6) 0%,
+                      rgba(0, 0, 0, 0) 100%
+      );
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      padding: 4px 8px 10px;
+
+      @include caption2
+
+    }
+  }
+}

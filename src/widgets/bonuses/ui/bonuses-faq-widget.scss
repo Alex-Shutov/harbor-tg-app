@@ -1,0 +1,13 @@
+@import "src/styles/helpers";
+.bonuses-faq-widget {
+  margin-bottom: 24px;
+
+  .title{
+    margin-bottom: 12px;
+    @include SFPro;
+    text-transform: none;
+    @include title1-s;
+    color: $n8;
+  }
+}
+

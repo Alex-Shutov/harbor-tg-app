@@ -1,0 +1,72 @@
+@import "src/styles/helpers";
+.promo-purchase-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__description {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  &__section {
+    justify-content: space-between;
+    align-items: center;
+    @include body1-xs;
+
+  }
+
+  &__section-label {
+    color: #3C3C4399;
+    margin-right: 8px;
+  }
+
+  &__section-value {
+    display: inline-flex;
+    align-items: center;
+    color: $n8;
+
+  }
+  &__section-value.link{
+    color: $p1;
+    &:hover{
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  &__error {
+    padding: 12px;
+    background-color: var(--error-light, #ffe0e0);
+    color: var(--error-color, #d32f2f);
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  &__success {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  &__success-icon {
+    font-size: 48px;
+  }
+
+  &__success-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-primary);
+  }
+
+}
+.promo-purchase-toast{
+  position: fixed;
+  bottom: 0px;
+  left: 8px;
+}

@@ -1,0 +1,17 @@
+import { IIconProps } from '@shared/ui/icons/icons.types.ts';
+
+export const FileInvoice = ({ size = 24, ...props }: IIconProps) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 40 40"
+    fill="none"
+    {...props}
+  >
+    <rect width="40" height="40" rx="20" fill="#045BFF"/>
+    <path d="M26.6668 18.6667V22C26.6668 25.3333 25.3335 26.6667 22.0002 26.6667H18.0002C14.6668 26.6667 13.3335 25.3333 13.3335 22V18C13.3335 14.6667 14.6668 13.3333 18.0002 13.3333H21.3335" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M26.6668 18.6667H24.0002C22.0002 18.6667 21.3335 18 21.3335 16V13.3333L26.6668 18.6667Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  </svg>
+);
+

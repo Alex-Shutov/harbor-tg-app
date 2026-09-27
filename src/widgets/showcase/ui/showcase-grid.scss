@@ -1,0 +1,42 @@
+@import 'src/styles/helpers';
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 0 16px;
+  margin-bottom: 24px;
+
+  &__card-wrapper {
+    width: 174px;
+  }
+
+  .establishment-card {
+    width: 100%;
+    cursor: pointer;
+
+    .image-container {
+      width: 100%;
+      aspect-ratio: 10 / 10;
+
+      &__event {
+        width: 100%;
+        aspect-ratio: 10 / 10;
+      }
+    }
+    
+    .details {
+      margin-left: 0;
+      margin-top: 4px;
+      
+      .name {
+        max-width: 100%;
+      }
+      
+      .categories {
+        width: 100%;
+      }
+    }
+  }
+}
+

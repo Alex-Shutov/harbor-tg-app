@@ -1,0 +1,33 @@
+@import "../../../../../styles/helpers";
+
+.main-categories {
+  width: 100%;
+
+  &__content {
+    display: flex;
+    gap: 4px;
+  }
+
+  &--filter {
+    .main-categories__content {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--page {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    .main-categories__content {
+      flex-wrap: nowrap;
+      min-width: min-content;
+    }
+  }
+}

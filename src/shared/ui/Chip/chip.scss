@@ -1,0 +1,27 @@
+@import "src/styles/helpers";
+
+.chip {
+  background-color: #7676801F;
+  border: none;
+  border-radius: 10px;
+  padding: 7px 14px;
+  color: $n8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+  user-select: none;
+  @include body1-m;
+
+  &--active {
+    background-color: $n8;
+    color: $n;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

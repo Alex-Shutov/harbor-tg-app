@@ -1,0 +1,53 @@
+@import "src/styles/helpers";
+
+.filter-icon-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: $n;
+  border: 1px solid #C6C6C8;
+  border-radius: 10px;
+  color: $n8;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  flex-shrink: 0;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: #76768033;
+  }
+
+  &:active:not(:disabled) {
+    background-color: #76768040;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &--active {
+    background-color: $n8;
+    color: $n;
+    svg{
+      color: $n;
+      fill: $n;
+    }
+    path{
+      stroke: $n;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: $n7;
+    }
+  }
+
+
+}

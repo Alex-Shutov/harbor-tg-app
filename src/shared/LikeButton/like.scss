@@ -1,0 +1,16 @@
+.like-button {
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}

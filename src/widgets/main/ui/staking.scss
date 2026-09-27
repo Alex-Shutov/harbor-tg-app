@@ -1,0 +1,62 @@
+@import "src/styles/helpers";
+.main__page__staking {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: $n;
+  position: relative;
+  overflow: hidden;
+
+  &-content {
+    flex: 1;
+    z-index: 1;
+  }
+
+  &-title {
+    @include title2;
+    color: $n;
+    margin: 0 0 8px 0;
+  }
+
+  &-text {
+    @include body2-s;
+    color: $n;
+    margin: 0 0 12px 0;
+    opacity: 0.9;
+  }
+
+  &-button {
+    background: $n;
+    color: $n8;
+    border: none;
+
+    &:hover {
+      background: $n2;
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.2;
+    z-index: 0;
+
+    .staking-icon {
+      font-size: 80px;
+      font-weight: bold;
+      color: $n;
+    }
+  }
+}

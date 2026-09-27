@@ -1,0 +1,55 @@
+@import "src/styles/helpers";
+.input-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+
+  &__native {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+
+    pointer-events: none;
+  }
+  .empty{
+    width: 20px;
+    height: 20px;
+    position: relative;
+  }
+
+  //&__custom {
+  //  width: 20px;
+  //  height: 20px;
+  //  border: 2px solid #3C3C43; // Белая граница
+  //  border-radius: 8px;
+  //  background-color: #FFFFFF99;
+  //  display: flex;
+  //  align-items: center;
+  //  justify-content: center;
+  //  transition: all 0.2s ease;
+  //
+  //  svg {
+  //    width: 20px;
+  //    height: 20px;
+  //    color: #FFFFFF; // Белая галочка
+  //    opacity: 0;
+  //    transition: opacity 0.2s ease;
+  //  }
+  //
+  //  &.checked {
+  //    background-color: $p1;
+  //    border-color: $p1;
+  //
+  //    svg {
+  //      opacity: 1;
+  //    }
+  //  }
+  //}
+
+
+}

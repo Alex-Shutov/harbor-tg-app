@@ -1,0 +1,10 @@
+node_modules
+# dist
+dev-dist
+.vscode
+.eslintrc.json
+.eslintignore
+.prettierrc
+.prettiergnore
+.stylelintrc.json
+.stylelintignore

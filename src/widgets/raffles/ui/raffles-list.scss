@@ -1,0 +1,56 @@
+@import "src/styles/helpers";
+
+.raffles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__error {
+    color: #FF3B30;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    padding: 24px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

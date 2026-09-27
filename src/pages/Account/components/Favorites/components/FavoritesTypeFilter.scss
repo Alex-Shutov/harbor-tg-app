@@ -1,0 +1,18 @@
+.favorites-type-filter {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+
+}
+
+.navigate-bar-content {
+  display: flex;
+  flex-direction: row; // Явно указываем направление
+  flex-wrap: nowrap; // Запрещаем перенос
+  gap: 4px;
+  @include indexPadding;
+  cursor: grab;
+  touch-action: pan-x;
+  position: relative;
+  min-width: min-content; // Позволяет контенту растягивать
+}

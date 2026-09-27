@@ -1,0 +1,66 @@
+@import "../../../../styles/helpers";
+
+.hours-component {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #333;
+}
+
+.hours-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  color: $p2;
+  @include caption2-s;
+
+  &--not-clickable {
+    cursor: auto;
+  }
+}
+
+.hours-header__arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  width: 12px;
+  height: 7px;
+
+  &.up {
+    transform: rotate(180deg);
+  }
+
+  &.down {
+    transform: rotate(0deg);
+  }
+}
+
+.hours-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+
+  &__day {
+    color: #000;
+    @include caption2-s;
+  }
+
+  &__time {
+    color: #000;
+    @include caption2-s;
+  }
+
+  &--current-day {
+    .hours-item__day,
+    .hours-item__time {
+      color: $p2; // Зеленый цвет для текущего дня
+      @include caption2-s;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import 'src/styles/helpers';
+
+.tab-card {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 12px;
+  background: #F6F6F8;
+  border: 1px solid #F7F8FC;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 90px;
+  text-align: left;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(117, 122, 142, 0.18);
+  }
+
+  &:active {
+    transform: translateY(0);
+    opacity: 0.95;
+  }
+
+  &--active {
+    box-shadow: 0 8px 32px rgba(117, 122, 142, 0.2);
+    outline: 1px solid rgba(36, 131, 255, 0.25);
+  }
+
+  &--large {
+    min-height: 121px;
+    max-height: 124px;
+  }
+
+  &__title {
+    @include base1-s;
+    @include SFPro;
+    color: $n8;
+  }
+
+  &__icon {
+    position: absolute;
+    right: -16px;
+    bottom: -16px;
+    width: 74px;
+    height: auto;
+    pointer-events: none;
+  }
+
+  &--large {
+    .tab-card__icon {
+      width: 112px;
+      right: -16px;
+      bottom: -16px;
+    }
+  }
+
+  &__icon--glyph {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    right: 12px;
+    bottom: 12px;
+    color: #8e8e93;
+
+    svg {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &--large &__icon--glyph {
+    width: 48px;
+    height: 48px;
+    right: 16px;
+    bottom: 16px;
+
+    svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

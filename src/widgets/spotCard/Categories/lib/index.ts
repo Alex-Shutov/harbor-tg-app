@@ -1,0 +1,1 @@
+export {useHorizontalScroll} from './hooks/useHorizontalScroll.ts'

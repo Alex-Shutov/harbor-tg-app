@@ -1,0 +1,71 @@
+@import "src/styles/helpers";
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-details__description {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+
+  &__add {
+
+  }
+}
+
+.task-details__section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @include body1-xs;
+  gap: 6px;
+}
+
+.task-details__inline-section {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  @include body1-xs;
+  gap: 6px;
+}
+
+.task-details__label {
+  color: #3C3C4399;
+}
+
+.task-details__value {
+  color: $n8;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &--rejection{
+    display: block;
+    text-wrap: wrap;
+  }
+
+  &--reward {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &--link {
+    color: $p1;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+

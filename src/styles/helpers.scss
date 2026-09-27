@@ -1,0 +1,365 @@
+@mixin xl {
+  @media only screen and (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin w {
+  @media only screen and (max-width: 1419px) {
+    @content;
+  }
+}
+
+@mixin x {
+  @media only screen and (max-width: 1339px) {
+    @content;
+  }
+}
+
+@mixin d {
+  @media only screen and (max-width: 1259px) {
+    @content;
+  }
+}
+
+@mixin t {
+  @media only screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin m {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin a {
+  @media only screen and (max-width: 639px) {
+    @content;
+  }
+}
+
+@mixin s {
+  @media only screen and (max-width: 474px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media only screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin SFPro {
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+@mixin Oswald {
+  font-family: 'Literata', Georgia, serif;
+}
+
+@mixin Manrope {
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+@mixin Literata {
+  font-family: 'Literata', Georgia, serif;
+}
+
+@mixin indexPadding{
+  padding: 10px 16px 10px 16px;
+}
+
+/* Harbor theme tokens */
+$p1: #0F6E6A;
+$p2: #2A9D8F;
+$p3: #E07A5F;
+$p4: #1C2B33;
+$s1: #A8D5D0;
+$s2: #C5D4DC;
+$s3: #EEF2F4;
+$s4: #B5E4CA;
+$s5: #F2D6A8;
+$s6: #C31212;
+$ph1: #E07A5F;
+
+$n: #FFFFFF;
+$n1: #F7F9FA;
+$n2: #EEF2F4;
+$n3: #E4EBEE;
+$n4: #3D8B8B;
+$n5: #1C2B33;
+$n6: #3C3C4399;
+$n7: #12202A;
+$n8: #000000;
+
+$shades1: #8A949C;
+$shades2: #5C6B73;
+$shades3: rgba(#5C6B73, 0.4);
+$shades4: rgba(#12202A, 0.5);
+
+
+@mixin title1-s {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: -0.45px;
+
+  @include m {
+    font-size: 18px;
+  }
+}
+
+@mixin title1-m {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.26px;
+
+
+}
+@mixin title1-l {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0.38px;
+
+}
+
+@mixin title2 {
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+}
+
+@mixin base1-s {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+@mixin base1-b {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+@mixin base2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71;
+}
+
+@mixin body1-m {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.23px;
+}
+
+@mixin body1-xs {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.23px;
+}
+
+
+@mixin body1-s {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: -0.015em;
+}
+
+@mixin body1-r {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+}
+
+@mixin body1-rb {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.43px;
+}
+
+@mixin body2-s {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71;
+}
+
+@mixin caption1 {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.23;
+}
+
+@mixin caption1-m {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.08px;
+}
+
+@mixin caption2 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+@mixin caption2-m {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+}
+@mixin caption2-s {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+@mixin button1 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@mixin button2 {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.85;
+}
+
+@mixin title{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+}
+
+
+@mixin placeholder {
+  &::placeholder {
+    @content;
+  }
+}
+
+
+@mixin r($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content;
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width + "px") {
+    @content;
+  }
+}
+
+
+@mixin dark {
+  //@at-root .dark-mode & {
+  //  @content;
+  //}
+}
+
+@mixin dark-body {
+  //@at-root .dark-mode {
+  //  @content;
+  //}
+}
+
+@mixin dark-common {
+  @at-root .dark-mode & {
+    @content;
+  }
+}
+
+@font-face {
+  font-family: 'Modern No. 20';
+  src: url('../../public/fonts/Mod20.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../../public/fonts/SFPro/SFProDisplay-Medium.eot');
+  src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'),
+  url('../../public/fonts/SFPro/SFProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../../public/fonts/SFPro/SFProDisplay-Medium.woff2') format('woff2'),
+  url('../../public/fonts/SFPro/SFProDisplay-Medium.woff') format('woff'),
+  url('../../public/fonts/SFPro/SFProDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
+
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../../public/fonts/SFPro/SFProDisplay-Bold.eot');
+  src: local('SF Pro Display Bold'), local('SFProDisplay-Bold'),
+  url('../../public/fonts/SFPro/SFProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../../public/fonts/SFPro/SFProDisplay-Bold.woff2') format('woff2'),
+  url('../../public/fonts/SFPro/SFProDisplay-Bold.woff') format('woff'),
+  url('../../public/fonts/SFPro/SFProDisplay-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+
+
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../../public/fonts/SFPro/SFProDisplay-Semibold.eot');
+  src: local('SF Pro Display Semibold'), local('SFProDisplay-Semibold'),
+  url('../../public/fonts/SFPro/SFProDisplay-Semibold.eot?#iefix') format('embedded-opentype'),
+  url('../../public/fonts/SFPro/SFProDisplay-Semibold.woff2') format('woff2'),
+  url('../../public/fonts/SFPro/SFProDisplay-Semibold.woff') format('woff'),
+  url('../../public/fonts/SFPro/SFProDisplay-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../../public/fonts/SFPro/SFProDisplay-Regular.eot');
+  src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'),
+  url('../../public/fonts/SFPro/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../../public/fonts/SFPro/SFProDisplay-Regular.woff2') format('woff2'),
+  url('../../public/fonts/SFPro/SFProDisplay-Regular.woff') format('woff'),
+  url('../../public/fonts/SFPro/SFProDisplay-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../../public/fonts/fonts/Oswald.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+

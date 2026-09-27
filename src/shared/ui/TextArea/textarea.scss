@@ -1,0 +1,74 @@
+@import 'src/styles/helpers';
+
+.textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.textarea-label {
+  color: $n6;
+  @include caption1-m;
+  margin-bottom: 8px;
+}
+
+.textarea-container {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  position: relative;
+  width: 100%;
+  min-height: 40px;
+  cursor: text;
+
+  &.textarea-error {
+    border: 1px solid #fe0100;
+  }
+}
+
+.textarea-input {
+  box-sizing: border-box;
+  padding: 10px 12px 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+  font-family: 'SF Pro Display', sans-serif;
+  @include body1-r;
+  color: $n8;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  overflow: hidden;
+
+  @include placeholder {
+    color: $shades3;
+    @include body1-r;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $shades3;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $shades2;
+  }
+}
+

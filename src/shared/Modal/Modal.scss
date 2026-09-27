@@ -1,0 +1,65 @@
+@import "src/styles/helpers";
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  z-index: 1000;
+  color: $n8;
+  .modal-header{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+  .title{
+    text-align: start;
+  }
+    .close-container{
+
+    }
+  }
+}
+
+.modal-content {
+  background-color: white;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  //padding: 20px 16px;
+  position: relative;
+  >*{
+    padding: 20px 16px;
+  }
+}
+
+
+.close-button {
+  margin: unset;
+  box-sizing: border-box;
+  background: #7F7F7F80;
+  background-blend-mode: luminosity;
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  border: none;
+  border-radius: 25px;
+  color: $n;
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  cursor: pointer;
+  padding: unset;
+  padding-bottom: 2px;
+  padding-left: .6px;
+
+
+}
+
+
+.modal-body {
+  padding: 10px 0;
+}

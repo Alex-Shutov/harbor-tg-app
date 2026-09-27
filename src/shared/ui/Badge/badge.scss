@@ -1,0 +1,41 @@
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 24px;
+  min-width: 48px;
+  padding-right: 2px;
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .value {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+.badge__primary {
+  background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%);
+  color: white;
+
+  //.icon svg {
+  //  filter: brightness(0) invert(1);
+  //}
+}
+
+.badge__secondary {
+  background-color: #f0f0f0;
+  color: #333;
+
+  .icon svg {
+    filter: brightness(0) saturate(100%) invert(0%);
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../styles/helpers";
+.rating {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: $n1;
+  color: $n8;
+  padding: 0px 8px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 18px;
+}

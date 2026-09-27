@@ -1,0 +1,215 @@
+@import "src/styles/helpers";
+
+.bottom-sheet-image {
+  &-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  background: white;
+  border-radius: 16px 16px 0 0;
+  max-height: 85vh;
+  overflow: hidden;
+  width: 100%;
+  animation: slideUp 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 148px;
+    overflow: hidden;
+  }
+
+  &__skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    &--next {
+      z-index: 3;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 148px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 2;
+    transform: translateX(0);
+
+    &--clickable {
+      cursor: pointer;
+    }
+
+    &--loaded {
+      opacity: 1;
+    }
+
+    &--hidden {
+      opacity: 0;
+    }
+
+    &--current {
+      z-index: 2;
+    }
+
+    &--next {
+      z-index: 3;
+    }
+
+    // Анимация выезда текущего изображения влево (при переходе вперед)
+    &--slide-out {
+      transform: translateX(-100%);
+    }
+
+    // Анимация выезда текущего изображения вправо (при переходе назад)
+    &--slide-out-prev {
+      transform: translateX(100%);
+    }
+
+    // Начальная позиция следующего изображения справа (при переходе вперед)
+    &--slide-start-right {
+      transform: translateX(100%);
+    }
+
+    // Начальная позиция следующего изображения слева (при переходе назад)
+    &--slide-start-left {
+      transform: translateX(-100%);
+    }
+
+    // Анимация въезда следующего изображения справа (при переходе вперед)
+    &--slide-in {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    // Анимация въезда следующего изображения слева (при переходе назад)
+    &--slide-in-prev {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 0.95;
+    }
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+  }
+
+  &__share-button {
+    position: absolute;
+    bottom: 24px;
+    right: 16px;
+    z-index: 10;
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 14px;
+    width: calc(100% - 16px);
+    background: white;
+
+    left: 50%;
+    transform: translate(-50%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 4px 8px 16px 8px;
+    border-radius: 16px;
+    z-index: 10;
+  }
+
+  &__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #D1D1D6;
+    transition: background 0.2s;
+
+    &--active {
+      background: #000000;
+    }
+  }
+
+  &__container {
+    position: relative;
+    top: -12px;
+    background: $n;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow-y: scroll;
+    max-height: calc(85vh - 112px);
+  }
+
+  &__header {
+    position: relative;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    @include title1-s;
+    @include SFPro;
+    color: $n8;
+    padding-right: 16px;
+    margin: unset;
+  }
+
+  &__close {
+    flex-shrink: 0;
+  }
+
+  &__content {
+    color: #3C3C4399;
+    padding: 0 16px 24px 16px;
+    flex-shrink: 0;
+    margin-bottom: 16px;
+
+  }
+}

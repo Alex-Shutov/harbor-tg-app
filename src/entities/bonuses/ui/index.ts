@@ -1,0 +1,2 @@
+export { BonusesBadge } from './BonusesBadge';
+

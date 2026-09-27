@@ -1,0 +1,42 @@
+.navbar-layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+
+  .navbar-container {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    background-color: white;
+    transition: transform 0.3s ease;
+
+    &.hidden {
+      display: none;
+      transform: translateY(100%);
+    }
+  }
+  &.chat-layout{
+    .account-layout {
+      margin-bottom: unset !important;
+    }
+  }
+}
+.hide-navbar{
+  display: none;
+  
+  ~ .cart-sticky-button {
+    display: none;
+  }
+}
+//@media (max-height: 500px) {
+//  .navbar-container {
+//    display: none;
+//  }
+//}
+
+/* Стили для остальных компонентов */

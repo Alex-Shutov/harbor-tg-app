@@ -1,0 +1,61 @@
+.task-submit {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-submit__hint {
+  font-size: 14px;
+  color: #5f5f5f;
+}
+
+.task-submit__files-list {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-submit__file-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background-color: #f4f4f5;
+}
+
+.task-submit__file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-submit__file-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #e0e0e0;
+}
+
+.task-submit__file-name {
+  font-size: 14px;
+}
+
+.task-submit__file-size {
+  font-size: 12px;
+  color: #8f8f8f;
+}
+
+.task-submit__file-remove {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+
+
+
+

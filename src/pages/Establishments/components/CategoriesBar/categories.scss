@@ -1,0 +1,79 @@
+@import "src/styles/helpers";
+
+// Добавляем контейнер
+.navigate-bar-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+// Сохраняем существующие стили для navigate-bar и добавляем необходимые для свайпа
+.navigate-bar-content {
+  display: flex;
+  flex-direction: row; // Явно указываем направление
+  flex-wrap: nowrap; // Запрещаем перенос
+  gap: 4px;
+  @include indexPadding;
+  cursor: grab;
+  touch-action: pan-x;
+  position: relative;
+  min-width: min-content; // Позволяет контенту растягивать
+}
+
+.navigate-button {
+  background-color: #7676801F;
+  border: none;
+  border-radius: 10px;
+  padding: 7px 14px;
+  color: $n8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+  user-select: none; // Предотвращаем выделение текста при свайпе
+  @include body1-m;
+
+  &.active {
+    background-color: $n8;
+    color: $n;
+  }
+
+  &.date-filter-item {
+    gap: 8px;
+  }
+}
+
+.date-filter-item {
+  &__close-wrapper {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 4px;
+  }
+
+  &__close {
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.2) !important;
+
+    img {
+      filter: brightness(0) invert(1);
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3) !important;
+    }
+  }
+}
+
+.navigate-button.active .date-filter-item__close {
+  background: rgba(255, 255, 255, 0.2) !important;
+
+  img {
+    filter: brightness(0) invert(1);
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+  }
+}

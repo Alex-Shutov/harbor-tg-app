@@ -1,0 +1,1 @@
+export {useReceivePromoCode} from './hooks/useReceivePromocode.ts'

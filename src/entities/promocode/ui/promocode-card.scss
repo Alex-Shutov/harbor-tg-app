@@ -1,0 +1,84 @@
+@import "src/styles/helpers";
+
+.promocode-card {
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  background: $n;
+  box-shadow: 0 2px 8px $shades3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  @include SFPro;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px $shades3;
+  }
+
+  &--expired {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &__image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+
+    @include m {
+      height: 140px;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: $shades4;
+    color: $n;
+    padding: 4px 8px;
+    border-radius: 6px;
+    @include caption2;
+  }
+
+  &__content {
+    padding: 12px;
+  }
+
+  &__title {
+    @include base1-s;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+    color: $n7;
+  }
+
+  &__description {
+    @include body1-xs;
+    color: $shades2;
+    margin: 0 0 12px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include caption2-m;
+    color: $shades1;
+  }
+
+  &__category {
+    background: $n2;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: $n5;
+  }
+
+  &__date {
+    color: $p3;
+    font-weight: 600;
+  }
+}
+

@@ -1,0 +1,2 @@
+export { UpdateRequiredModal } from './UpdateRequiredModal';
+

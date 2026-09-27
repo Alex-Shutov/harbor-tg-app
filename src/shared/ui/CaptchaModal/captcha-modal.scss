@@ -1,0 +1,38 @@
+@import '@/styles/helpers';
+
+.captcha-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__description {
+    @include body1-xs;
+    color: $n6;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__captcha-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    padding: 10px 0;
+  }
+
+  &__error {
+    @include body2-s;
+    color: $s6;
+    text-align: center;
+    padding: 8px;
+    background-color: rgba(195, 18, 18, 0.1);
+    border-radius: 8px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+  }
+}
+

@@ -1,0 +1,23 @@
+@import  'src/styles/helpers';
+
+.menu-section {
+  background: #fff;
+  border-radius: 16px;
+
+  &__title {
+    text-transform: none;
+    margin-bottom: 16px;
+    font-family: Oswald;
+
+    @include title
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+
+
+}

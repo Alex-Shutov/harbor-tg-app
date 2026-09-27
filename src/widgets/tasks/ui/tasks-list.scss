@@ -1,0 +1,17 @@
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tasks-list__empty,
+.tasks-list__loader {
+  margin-top: 16px;
+}
+
+
+
+
+
+
+

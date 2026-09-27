@@ -1,0 +1,19 @@
+@import "src/styles/helpers";
+
+.orders-list-widget {
+  &__skeleton {
+    padding: 16px;
+  }
+
+  &__list {
+  }
+
+  &__empty {
+    padding: 32px 16px;
+    text-align: center;
+    @include body1-m;
+    color: $n6;
+  }
+}
+
+

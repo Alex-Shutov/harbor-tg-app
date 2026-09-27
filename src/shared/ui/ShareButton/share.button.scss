@@ -1,0 +1,49 @@
+@import '@/styles/helpers';
+
+.share-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: $n;
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+
+
+  &--small {
+    width: 32px;
+    height: 32px;
+
+
+  }
+
+  &--medium {
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(&--disabled) {
+    background: rgba($n, 0.8);
+  }
+}

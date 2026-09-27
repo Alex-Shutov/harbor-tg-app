@@ -1,0 +1,57 @@
+@import "src/styles/helpers";
+
+.number-pad {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0px 12px;
+
+  &__row {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+
+    &--last {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+  }
+
+  &__spacer {
+    // Spacer для выравнивания, невидимый элемент
+  }
+
+  &__button {
+    flex: 1;
+    height: 56px;
+    border: none;
+    border-radius: 12px;
+    background-color: $n;
+    @include SFPro;
+    @include title1-m;
+    color: $n8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+
+    &:active {
+      background-color: $n2;
+      transform: scale(0.95);
+    }
+
+
+    &--backspace {
+      color: $n8;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+

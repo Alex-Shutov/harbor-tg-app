@@ -1,0 +1,596 @@
+
+@import '@/styles/helpers';
+
+// ========== GALLERY WRAPPER ==========
+.gallery {
+  //padding: 24px 0px 16px 16px;
+  width: 100%;
+  position: relative;
+  top:-16px;
+  background: white;
+  border-radius: 16px;
+  .gallery__title {
+    margin: 0;
+    font-family: Oswald;
+    text-transform: none;
+  @include title;
+    margin-bottom: 16px;
+  }
+}
+
+.gallery__header {
+  // empty
+  padding: 24px 0px 16px 16px;
+}
+
+
+
+// ========== TABS ==========
+.gallery__tabs {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  margin-bottom: 16px;
+  padding: 0 0 8px;
+  //border-bottom: 1px solid rgba($n, 0.1);
+
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+}
+
+.gallery__tab {
+  @include caption2;
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  color: $shades2;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  font-family: 'SF Pro Display', sans-serif;
+  transition: all 0.3s ease;
+  position: relative;
+
+  @include xs {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+
+
+  &--active {
+    color: $n8;
+    font-weight: 600;
+    background-color: #F6F6F8;
+    border-radius: 16px;
+
+
+  }
+}
+
+// ========== IMAGES CONTAINER ==========
+.gallery__content {
+  padding: 0px 0px 16px 16px;
+  position: relative;
+  width: calc(100% - 32px);
+  overflow: hidden;
+}
+
+// ========== ОДНА ВЫСОТА ДЛЯ ВСЕХ! ==========
+.gallery__images--1,
+.gallery__images--2,
+.gallery__images--3,
+.gallery__images--4-scroll {
+  --gallery-height: 260px;
+
+  @include m {
+    --gallery-height: 220px;
+  }
+
+  @include xs {
+    --gallery-height: 180px;
+  }
+
+  height: var(--gallery-height);
+}
+
+.gallery__images--1 {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+
+  .gallery__image-item {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// ========== LAYOUT 2: Две фотографии ==========
+.gallery__images--2 {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 4px;
+  flex-wrap: nowrap;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba($n, 0.05);
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba($n, 0.2);
+    border-radius: 2px;
+
+    &:hover {
+      background: rgba($n, 0.3);
+    }
+  }
+
+  .gallery__image-item {
+    flex: 0 0 calc(50% - 4px);
+    height: 100%;
+    scroll-snap-align: start;
+  }
+}
+
+// ========== LAYOUT 3: Три фотографии ==========
+.gallery__images--3 {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  overflow: hidden;
+
+  .gallery__image-item {
+    &:first-child {
+      grid-row: 1 / 3;
+      grid-column: 1;
+    }
+
+    &:nth-child(2) {
+      grid-row: 1;
+      grid-column: 2;
+    }
+
+    &:nth-child(3) {
+      grid-row: 2;
+      grid-column: 2;
+    }
+
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+}
+
+// ========== LAYOUT 4+: Четыре и больше (ГОРИЗОНТАЛЬНЫЙ СКРОЛЛ) ==========
+.gallery__images--4-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 4px;
+  flex-wrap: nowrap;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba($n, 0.05);
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba($n, 0.2);
+    border-radius: 2px;
+
+    &:hover {
+      background: rgba($n, 0.3);
+    }
+  }
+}
+
+// ========== ГРУППА: regular (60% + 40% колонкой) ==========
+.gallery__group--regular {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  flex: 0 0 calc(100% - 40px);
+  scroll-snap-align: start;
+  height: 100%;
+
+  .gallery__image-item {
+    &:first-child {
+      grid-row: 1 / 3;
+      grid-column: 1;
+    }
+  }
+
+  @include m {
+    flex: 0 0 calc(100% - 32px);
+  }
+
+  @include xs {
+    flex: 0 0 calc(100% - 24px);
+  }
+
+  &:last-child {
+    flex: 0 0 100%;
+  }
+}
+
+// ========== ГРУППА: full (100% ширина) ==========
+.gallery__group--full {
+  display: block;
+  flex: 0 0 calc(100% - 40px);
+  scroll-snap-align: start;
+  height: 100%;
+
+  .gallery__image-item {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include m {
+    flex: 0 0 calc(100% - 32px);
+  }
+
+  @include xs {
+    flex: 0 0 calc(100% - 24px);
+  }
+
+  &:last-child {
+    flex: 0 0 100%;
+  }
+}
+
+// ========== ГРУППА: pair (50% + 50%) ==========
+.gallery__group--pair {
+  display: flex;
+  gap: 8px;
+  flex: 0 0 calc(100% - 40px);
+  scroll-snap-align: start;
+  height: 100%;
+  flex-wrap: nowrap;
+
+  .gallery__image-item {
+    flex: 1;
+    height: 100%;
+  }
+
+  @include m {
+    flex: 0 0 calc(100% - 32px);
+  }
+
+  @include xs {
+    flex: 0 0 calc(100% - 24px);
+  }
+
+  &:last-child {
+    flex: 0 0 100%;
+  }
+}
+
+// ========== КОНТЕЙНЕР ДЛЯ МАЛЫХ ФОТО (40%, колонкой) ==========
+.gallery__group-small {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  grid-column: 2;
+  grid-row: 1 / 3;
+
+  .gallery__image-item {
+    flex: 1;
+    height: 100%;
+  }
+}
+
+// ========== GALLERY IMAGE ITEM ==========
+.gallery__image-item {
+  position: relative;
+  background: $n2;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    filter: brightness(0.9);
+    transform: scale(1.02);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &.is-loading {
+    background: linear-gradient(
+                    90deg,
+                    $n2 25%,
+                    $n3 37%,
+                    $n2 50%,
+                    $n2 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  &.has-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($n8, 0.5);
+    color: $shades2;
+    font-size: 12px;
+    text-align: center;
+    padding: 16px;
+  }
+}
+
+.gallery__image-error {
+  font-size: 12px;
+  color: $shades2;
+}
+
+// ========== LIGHTBOX ==========
+.gallery__lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.gallery__lightbox-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba($n8, 0.98);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.gallery__lightbox-content {
+  position: relative;
+  z-index: 10;
+  width: 90vw;
+  height: 85vh;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include m {
+    width: 95vw;
+    height: 80vh;
+  }
+
+  @include xs {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.gallery__lightbox-image-wrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gallery__lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  animation: zoomIn 0.3s ease;
+}
+
+.gallery__lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 20;
+  width: 40px;
+  height: 40px;
+  background: rgba($n, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: $n;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba($n, 0.3);
+    transform: scale(1.1);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include xs {
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.gallery__lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 48px;
+  height: 48px;
+  background: rgba($n, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: $n;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba($n, 0.3);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  &--prev {
+    left: 16px;
+
+    @include xs {
+      left: 8px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &--next {
+    right: 16px;
+
+    @include xs {
+      right: 8px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.gallery__lightbox-thumbnails {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 16px;
+  width: 100%;
+  justify-content: center;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba($n, 0.3);
+    border-radius: 2px;
+  }
+
+  @include xs {
+    padding: 12px;
+    gap: 6px;
+  }
+}
+
+.gallery__lightbox-thumbnail {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: none;
+  border: 2px solid rgba($n, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    border-color: rgba($n, 0.4);
+    transform: scale(1.05);
+  }
+
+  &--active {
+    border-color: $p1;
+  }
+
+  @include xs {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.gallery__lightbox-counter {
+  @include caption2;
+  padding: 6px 12px;
+  background: rgba($n, 0.2);
+  color: $n;
+  border-radius: 4px;
+  font-weight: 600;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+
+  @include xs {
+    bottom: 12px;
+    right: 12px;
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+
+// ========== ANIMATIONS ==========
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

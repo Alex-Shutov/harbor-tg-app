@@ -1,0 +1,18 @@
+.categories-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+
+  &__separator {
+    margin: 0 4px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &__item {
+    white-space: nowrap;
+  }
+}
+

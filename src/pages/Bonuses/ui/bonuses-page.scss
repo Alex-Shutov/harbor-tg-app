@@ -1,0 +1,72 @@
+@import "src/styles/helpers";
+
+.bonuses-page {
+  @include indexPadding;
+  min-height: 100vh;
+  background: $n;
+
+  &__header {
+    margin-bottom: 24px;
+    .title{
+      @include SFPro;
+    text-transform: none;
+      @include title1-s;
+      color: $n8;
+    }
+
+  }
+
+  &__balance {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+
+    .transfer-bonuses-toast{
+        background: transparent;
+        top: calc(100vh - 200px);
+        .toast-message__content{
+          bottom: 0px;
+          background: $n;
+      }
+    }
+
+    .badge {
+      gap: unset;
+      flex-grow: 1;
+      background: linear-gradient(90deg, #DDB4F6 0%, #8DD0FC 100%);
+
+      padding: 20px 32px;
+      border-radius: 20px;
+      min-width: 200px;
+
+      .value {
+        @include title1-l;
+        color: $n;
+
+      }
+
+      .icon {
+        color: $p3;
+      }
+    }
+
+
+
+  }
+
+  &__actions {
+    margin-bottom: 24px;
+  }
+
+  &__history {
+    margin-bottom: 24px;
+  }
+
+  &__faq {
+    margin-bottom: 24px;
+  }
+}
+
+// Адаптивность для мобильных устройств
+
+

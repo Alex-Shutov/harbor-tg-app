@@ -1,0 +1,143 @@
+@import "src/styles/helpers";
+
+.filters-modal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  &__section {
+    margin-bottom: 24px;
+
+    h3{
+      @include body1-m;
+      color: $n6;
+      margin-bottom: 12px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 16px;
+    }
+  }
+
+
+
+
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__filter-button {
+    background-color: #7676801F;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 14px;
+    color: $n8;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    user-select: none;
+    @include body1-m;
+
+    &--active {
+      background-color: $n8;
+      color: $n;
+    }
+
+    &--cost {
+      min-width: 50px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+
+    input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3C3C43;
+    border-radius: 8px;
+    background-color: #FFFFFF99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: #FFFFFF;
+    }
+  }
+
+  &__checkbox input[type="checkbox"]:checked + &__checkbox-custom {
+    background-color: $p1;
+    border-color: $p1;
+  }
+
+  &__checkbox-label {
+    @include body1-m;
+    color: $n8;
+  }
+
+  &__reset {
+    width: 100%;
+    background: none;
+    border: none;
+    color: $p1;
+    @include body1-m;
+    cursor: pointer;
+    padding: 12px 0;
+    text-align: center;
+    text-decoration: underline;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__actions {
+    position: sticky;
+    bottom: 0;
+    button{
+      flex-grow: 1;
+    }
+    display: flex;
+    gap: 12px;
+    padding: 16px 20px;
+    background-color: $n;
+  }
+}

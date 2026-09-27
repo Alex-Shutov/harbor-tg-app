@@ -1,0 +1,72 @@
+@import "src/styles/helpers";
+
+.referal-system-widget {
+  position: relative;
+  padding: 12px;
+  background: linear-gradient(90deg, #f1e1fc 0%, #d2ecfe 100%);
+  //linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 20px;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    @include SFPro;
+    @include body1-r;
+    color: $n8;
+    margin: 0 0 8px 0;
+  }
+
+  &__reward {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  &__reward-amount {
+    @include title1-s;
+    color: $n8;
+    margin-right: -6px;
+    font-weight: 400;
+  }
+
+
+  &__description {
+    @include body1-xs;
+    color: #3C3C4399;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: -20px;
+    right: -6px;
+    z-index: 1;
+  }
+
+  &__arrow-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+}
+

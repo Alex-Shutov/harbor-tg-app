@@ -1,0 +1,104 @@
+@import "src/styles/helpers";
+
+.promocode-card {
+  @include SFPro;
+  background: $n;
+  border-radius: 12px;
+  padding-right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 100%;
+  flex-shrink: 0;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  &__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  &__title {
+    @include body1-r;
+    @include SFPro;
+    font-weight: 500;
+    text-transform: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: $n8;
+  }
+
+  &__description {
+    @include body1-m;
+    color: $n8;
+    margin: 0;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__validity {
+    @include body1-xs;
+    color: $n8;
+    margin: 0;
+    &-value{
+      color: $shades2;
+    }
+  }
+
+  &__cost {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    min-height: 20px;
+    margin-top: 4px;
+  }
+
+  &__cost-label {
+    @include body1-xs;
+    color: $shades2;
+    .value{
+      color: $n8;
+      @include body1-xs;
+      @include SFPro;
+
+    }
+  }
+
+  &__cost-icon {
+    @include caption1-m;
+    color: $n8;
+    font-weight: 600;
+  }
+
+  &__image {
+    width: 98px;
+    height: 98px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: $n2;
+    display: inline-flex;
+  }
+
+  &__img {
+    margin: auto;
+    object-fit: scale-down;
+  }
+
+  &__button {
+    margin-top: 4px;
+  }
+}
+

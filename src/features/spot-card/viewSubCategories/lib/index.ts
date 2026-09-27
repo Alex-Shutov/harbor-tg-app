@@ -1,0 +1,1 @@
+export {useViewSubcategories} from './hooks/useViewCategories.ts'

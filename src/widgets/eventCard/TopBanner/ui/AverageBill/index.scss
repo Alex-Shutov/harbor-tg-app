@@ -1,0 +1,38 @@
+@import '../../../../../styles/helpers';
+
+.average-bill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    color: $n;
+    opacity: 0.8;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__amount {
+    @include SFPro;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $n;
+  }
+
+  &__label {
+    @include SFPro;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    color: #CFCFCF;
+  }
+}

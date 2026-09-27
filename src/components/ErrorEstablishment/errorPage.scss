@@ -1,0 +1,9 @@
+
+.error-page{
+  padding: 2rem;
+  .empty-state--container-button{
+    position: absolute;
+    bottom: 48px;
+    width: calc(100% - 4rem);
+  }
+}

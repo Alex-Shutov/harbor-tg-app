@@ -1,0 +1,135 @@
+@import "src/styles/helpers";
+
+.order-card {
+  background-color: $n;
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 4px;
+  padding-bottom: 12px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #7676801F;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+
+  &__restaurant {
+    flex: 1;
+  }
+
+  &__restaurant-name {
+    margin: 0 0 4px 0;
+    color: $n8;
+  }
+
+  &__details-button{
+    background-color: #F6F6F8;
+    border: unset;
+    border-radius: 8px;
+    padding: 7px 14px;
+    margin-top: 8px;
+  }
+
+  &__cuisine {
+    color: $n6;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__pickup {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #7676801F;
+    padding-bottom: 12px;
+    gap: 4px;
+  }
+
+  &__pickup-label {
+    @include SFPro;
+    @include body1-rb;
+    color: $n8;
+  }
+
+  &__pickup-address {
+    @include body1-xs;
+    color: $n8;
+  }
+
+  &__pickup-hours {
+    @include body1-xs;
+    color: $n8;
+  }
+
+  &__order-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: $n6;
+  }
+  &__order-number{
+    color: #3C3C4399;
+    @include SFPro;
+    @include body1-xs;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item-name {
+    @include body1-r;
+    color: $n8;
+  }
+
+  &__item-price {
+    @include body1-r;
+    color: $n8;
+  }
+
+  &__comment {
+    padding: 0px 12px;
+    border-radius: 8px;
+    color: $n8;
+    margin-top: 8px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  &__cancel-button {
+    color: #FF0000;
+    background-color: #FEF4F1;
+    width: -webkit-fill-available;
+    border-color: transparent;
+    @include SFPro;
+    @include body1-xs;
+
+
+  }
+}
+
+

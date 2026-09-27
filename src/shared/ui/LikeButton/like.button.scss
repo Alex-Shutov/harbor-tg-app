@@ -1,0 +1,72 @@
+@import '@/styles/helpers';
+
+.like-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($n, 1);
+  backdrop-filter: blur(2px);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+
+  &:active {
+    transform: scale(0.5);
+  }
+
+  &--small {
+    width: 32px;
+    height: 32px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &--medium {
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &--large {
+    width: 48px;
+    height: 48px;
+
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &--liked {
+    svg path {
+      animation: heartBeat 0.3s ease;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(&--disabled) {
+    //background: rgba($n, 0.8);
+  }
+}
+
+@keyframes heartBeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}

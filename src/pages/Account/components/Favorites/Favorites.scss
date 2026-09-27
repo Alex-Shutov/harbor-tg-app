@@ -1,0 +1,28 @@
+
+@import "src/styles/helpers";
+.profile-favorites {
+  margin-bottom: 96px;
+  color: $n8;
+  &__header {
+    margin: 20px 0px 10px 0px;
+    padding-left: 16px;
+    h1 {
+      //styleName: Emphasized/Title3;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 25px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+
+      margin: 0;
+    }
+  }
+  .empty-cont {
+    display: contents;
+
+    .empty-state {
+      padding: 2rem
+    }
+  }
+}

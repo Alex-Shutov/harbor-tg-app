@@ -1,0 +1,10 @@
+@import "src/styles/helpers";
+.events-section{
+  padding-bottom: 16px;
+  &__title{
+    text-transform: none;
+    font-family: Oswald;
+    @include title;
+    padding-bottom: 16px;
+  }
+}

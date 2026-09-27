@@ -1,0 +1,173 @@
+@import "src/styles/helpers";
+
+.referal-modal {
+  display: flex;
+  flex-direction: column;
+
+  &__reward-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__reward {
+    display: flex;
+    align-items: center;
+  }
+
+  &__reward-amount {
+    @include title1-s;
+    @include SFPro;
+    color: $n8;
+    font-weight: 400;
+  }
+
+  &__description {
+    @include body1-xs;
+    color: #3C3C4399;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  &__earned {
+    margin-top: 8px;
+    display: flex;
+    gap: 4px;
+
+    align-items: center;
+  }
+
+  &__earned-label {
+    @include body1-xs;
+    color: #3C3C4399;
+  }
+
+  &__earned-amount {
+    display: flex;
+    align-items: center;
+    @include body1-m;
+    font-weight: 400;
+    color: $n8;
+  }
+
+  &__link-section {
+    margin-top:  8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__link-label {
+    @include body1-xs;
+    color: #3C3C4399;
+    font-weight: 500;
+  }
+
+  &__invitations {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__invitations-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__invitations-title {
+    @include title1-s;
+    color: $n8;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  &__invitations-count {
+    @include body1-xs;
+    color: #3C3C4399;
+  }
+
+  &__referrals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__empty {
+    text-align: center;
+    padding: 24px;
+    @include body1-xs;
+    color: #3C3C4399;
+  }
+
+  &__referral-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #F9F9F9;
+    border-radius: 12px;
+  }
+
+  &__referral-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__referral-avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #E8D5FF 0%, #D4C5F0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include title1-s;
+    color: $n8;
+    font-weight: 600;
+  }
+
+  &__referral-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__referral-username {
+    @include body1-s;
+    color: $n8;
+    font-weight: 500;
+  }
+
+  &__referral-date {
+    @include body1-xs;
+    color: #3C3C4399;
+  }
+
+  &__referral-status {
+    flex-shrink: 0;
+  }
+
+  &__share {
+    position: sticky;
+    bottom: 32px;
+    padding-top: 16px;
+    background: white;
+    margin-top: auto;
+    &-button{
+      width: -webkit-fill-available;
+    }
+  }
+}
+
+

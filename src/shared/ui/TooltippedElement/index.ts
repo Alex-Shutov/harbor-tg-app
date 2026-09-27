@@ -1,0 +1,2 @@
+export { TooltippedElement } from './TooltippedElement';
+
